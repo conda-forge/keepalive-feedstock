@@ -11,6 +11,18 @@ Summary: An HTTP handler for urllib that supports HTTP 1.1 and keepalive in both
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/keepalive-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/keepalive-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/keepalive-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/keepalive-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/keepalive-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/keepalive-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keepalive/badges/version.svg)](https://anaconda.org/conda-forge/keepalive)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keepalive/badges/downloads.svg)](https://anaconda.org/conda-forge/keepalive)
+
 Installing keepalive
 ====================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `keepalive` available on your plat
 ```
 conda search keepalive --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/keepalive-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/keepalive-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/keepalive-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/keepalive-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/keepalive-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/keepalive-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keepalive/badges/version.svg)](https://anaconda.org/conda-forge/keepalive)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keepalive/badges/downloads.svg)](https://anaconda.org/conda-forge/keepalive)
 
 
 Updating keepalive-feedstock
