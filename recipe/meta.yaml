@@ -25,6 +25,7 @@ requirements:
 test:
   imports:
     - keepalive
+    - keepalive.keepalive
 
 about:
   home: https://github.com/wikier/keepalive
