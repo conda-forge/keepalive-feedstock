@@ -29,7 +29,7 @@ test:
 
 about:
   home: https://github.com/wikier/keepalive
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_file: LICENSE
   summary: 'An HTTP handler for urllib that supports HTTP 1.1 and keepalive in both Python 2.x and 3.x versions.'
   dev_url: https://github.com/wikier/keepalive
