@@ -22,6 +22,8 @@ requirements:
   host:
     - pip
     - python
+    # see https://github.com/wikier/keepalive/issues/10
+    - setuptools <58
   run:
     - python
 
