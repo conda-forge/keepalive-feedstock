@@ -1,31 +1,31 @@
-{% set name = "keepalive" %}
 {% set version = "0.5" %}
 
 package:
-  name: {{ name }}
+  name: keepalive
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  - url: https://pypi.io/packages/source/k/keepalive/keepalive-{{ version }}.tar.gz
     sha256: 3c6b96f9062a5a76022f0c9d41e9ef5552d80b1cadd4fccc1bf8f183ba1d1ec1
+    patches:
+      - 0000-no-2to3.patch
   - url: https://raw.githubusercontent.com/wikier/keepalive/{{ version }}/LICENSE
     sha256: 7c6699c75f87b52bdc542db26d6b1b92892577cda46e20eceb79e2790a1c291b
 
 build:
+  noarch: python
   number: 6
-  script: {{ PYTHON }} -m pip install --no-deps -vv .
+  script:
+    - 2to3 -w -n setup.py
+    - 2to3 -w -n keepalive/*.py
+    - {{ PYTHON }} -m pip install --no-deps -vv .
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
-    # see https://github.com/wikier/keepalive/issues/10
-    - setuptools <58
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
