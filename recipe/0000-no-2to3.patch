@@ -1,0 +1,8 @@
+--- setup.py	2021-11-02 11:31:01.522502455 -0500
++++ setup.py	2021-11-02 11:31:09.840508859 -0500
+@@ -71,5 +71,4 @@
+         'Programming Language :: Python :: 3.5',
+       ],
+       keywords = 'python http urllib keepalive',
+-      use_2to3 = True
+ )
