@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/k/keepalive/keepalive-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/k/keepalive/keepalive-{{ version }}.tar.gz
     sha256: 3c6b96f9062a5a76022f0c9d41e9ef5552d80b1cadd4fccc1bf8f183ba1d1ec1
     patches:
       - 0000-no-2to3.patch
@@ -13,24 +13,30 @@ source:
     sha256: 7c6699c75f87b52bdc542db26d6b1b92892577cda46e20eceb79e2790a1c291b
 
 build:
+  number: 7
   noarch: python
-  number: 6
   script:
     - 2to3 -w -n setup.py
     - 2to3 -w -n keepalive/*.py
-    - {{ PYTHON }} -m pip install --no-deps -vv .
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - pip
+    - python {{ python_min }}
   imports:
     - keepalive
     - keepalive.keepalive
+  commands:
+     - pip check
 
 about:
   home: https://github.com/wikier/keepalive
